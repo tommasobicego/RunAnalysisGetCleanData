@@ -17,7 +17,7 @@ function that writes on the CSV file dataset/mean_dev.csv the complete set of da
     }
 
 **giveMeTestSet**
-function that returns the complete set of data contained by the directory test, and already formatted.
+function that returns the complete set of data contained by the directory test, and already formatted in a data.table.
     
     giveMeTestSet <- function(){
       ytest <- readytest()
@@ -52,7 +52,7 @@ function that returns a data.table containing the values from the /features.txt 
     }
 
 **readXtest**
-function that returns a data.table containing the values about the means and the santard deviation from the /test/X_test.TXT file, the chosen columns are selected via the file with the features (the function readFeatures determines the names of the columns because there are many records on a row as there are features)
+function that returns a data.table containing the values with only the means and the santard deviations from the /test/X_test.TXT file, the columns are named via the file with the features (the function readFeatures determines the names of the columns because there are many records on a row as there are features) and they are selected via a simple grep on the strings "mean" and "std"
     
     readXtest <- function(){
       library(data.table)
@@ -88,7 +88,7 @@ function that returns a data.table containing the values from the /test/subject_
     }
 
 **giveMeTrainSet**
-function that returns the complete set of data contained by the directory train, and already formatted.
+function that returns the complete set of data contained by the directory train, and already formatted in a data.table.
     
     giveMeTrainSet <- function(){
       ytrain <- readytrain()
@@ -113,7 +113,7 @@ function that returns a data.table containing the values from the /train/y_train
     }
 
 **readXtrain**
-function that returns a data.table containing the values about the means and the santard deviation from the /train/X_train.TXT file, the chosen columns are selected via the file with the features (the function readFeatures determines the names of the columns because there are many records on a row as there are features)
+function that returns a data.table containing the values with only the means and the santard deviations from the /train/X_train.TXT file, the columns are named via the file with the features (the function readFeatures determines the names of the columns because there are many records on a row as there are features) and they are selected via a simple grep on the strings "mean" and "std"
     
     readXtrain <- function(){
       library(data.table)
