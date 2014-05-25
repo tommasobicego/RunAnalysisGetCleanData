@@ -1,6 +1,6 @@
 ###run_analysis.R list of functions:
 
-run_analysis
+**run_analysis**
 function that writes on the CSV file dataset/mean_dev.csv the complete set of data (train + test), the test's set records are appended to the train's set ones.
     
     run_analysis <- function(){
@@ -10,8 +10,8 @@ function that writes on the CSV file dataset/mean_dev.csv the complete set of da
       write.csv(x=total, file="dataset/mean_dev.csv")
     }
 
-giveMeTestSet
-functionn that returns the complete set of data contained by the directory test, and already formatted.
+**giveMeTestSet**
+function that returns the complete set of data contained by the directory test, and already formatted.
     
     giveMeTestSet <- function(){
       ytest <- readytest()
@@ -25,7 +25,7 @@ functionn that returns the complete set of data contained by the directory test,
       dt
     }
 
-readytest
+**readytest**
 function that returns a data.table containing the values from the /test/y_test.txt file
     
     readytest <- function(){
@@ -35,7 +35,7 @@ function that returns a data.table containing the values from the /test/y_test.t
       dt
     }
 
-readFeatures
+**readFeatures**
 function that returns a data.table containing the values from the /features.txt file
     
     readFeatures <- function(){
@@ -45,7 +45,7 @@ function that returns a data.table containing the values from the /features.txt 
       dt
     }
 
-readXtest
+**readXtest**
 function that returns a data.table containing the values about the means and the santard deviation from the /test/X_test.TXT file, the chosen columns are selected via the file with the features (the function readFeatures determines the names of the columns because there are many records on a row as there are features)
     
     readXtest <- function(){
@@ -71,7 +71,7 @@ function that returns a data.table containing the values about the means and the
       dt
     }
 
-readSubjectTest
+**readSubjectTest**
 function that returns a data.table containing the values from the /test/subject_test.txt file
     
     readSubjectTest <- function(){
@@ -81,7 +81,7 @@ function that returns a data.table containing the values from the /test/subject_
       dt
     }
 
-giveMeTrainSet
+**giveMeTrainSet**
 function that returns the complete set of data contained by the directory train, and already formatted.
     
     giveMeTrainSet <- function(){
@@ -106,7 +106,7 @@ function that returns a data.table containing the values from the /train/y_train
       dt
     }
 
-readXtrain
+**readXtrain**
 function that returns a data.table containing the values about the means and the santard deviation from the /train/X_train.TXT file, the chosen columns are selected via the file with the features (the function readFeatures determines the names of the columns because there are many records on a row as there are features)
     
     readXtrain <- function(){
@@ -131,7 +131,7 @@ function that returns a data.table containing the values about the means and the
       dt
     }
 
-readActivityLabels
+**readActivityLabels**
 function that returns a data.table containing the values from the activity_labels.TXT file
     
     readActivityLabels <- function(){
@@ -141,7 +141,7 @@ function that returns a data.table containing the values from the activity_label
       dt
     }
 
-readSubjectTrain
+**readSubjectTrain**
 function that returns a data.table containing the values from the /train/subject_train.txt file
     
     readSubjectTrain <- function(){
@@ -154,8 +154,7 @@ function that returns a data.table containing the values from the /train/subject
 #########################################################
 ###run_analysis_5.R functions:
 
-run_analysis_5
-
+**run_analysis_5**
 returns the average of each variable for each activity and each subject as defined in the file mean_dev.csv created by the function run_analysis() as defined in the file run_analysis.R. The function writes this set into the CSV file dtKEnd.csv
     
     run_analysis_5 <- function(){
