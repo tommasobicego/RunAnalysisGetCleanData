@@ -154,7 +154,8 @@ function that returns a data.table containing the values from the /train/subject
 #########################################################
 ###run_analysis_5.R functions:
 
-#run_analysis_5
+run_analysis_5
+
 returns the average of each variable for each activity and each subject as defined in the file mean_dev.csv created by the function run_analysis() as defined in the file run_analysis.R. The function writes this set into the CSV file dtKEnd.csv
     
     run_analysis_5 <- function(){
