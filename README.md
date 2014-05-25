@@ -1,4 +1,9 @@
-###run_analysis.R list of functions:
+###run_analysis.R
+This file has to:
+1.  Merges the training and the test sets to create one data set.
+2.  Extracts only the measurements on the mean and standard deviation for each measurement. 
+3.  Uses descriptive activity names to name the activities in the data set
+4.  Appropriately labels the data set with descriptive activity names. 
 
 **run_analysis**
 function that writes on the CSV file dataset/mean_dev.csv the complete set of data (train + test), the test's set records are appended to the train's set ones.
@@ -152,10 +157,12 @@ function that returns a data.table containing the values from the /train/subject
     }
 
 #########################################################
-###run_analysis_5.R functions:
+###run_analysis_5.R
+This file has to:
+1.  Creates a second, independent tidy data set with the average of each variable for each activity and each subject. 
 
 **run_analysis_5**
-returns the average of each variable for each activity and each subject as defined in the file mean_dev.csv created by the function run_analysis() as defined in the file run_analysis.R. The function writes this set into the CSV file dtKEnd.csv
+returns the average of each variable for each activity and each subject as defined in the file mean_dev.csv created by the function run_analysis() defined in the file run_analysis.R. The function writes this set into the CSV file dtKEnd.csv
     
     run_analysis_5 <- function(){
       library(data.table)
