@@ -38,6 +38,7 @@ function that returns a data.table containing the values from the /train/subject
 
 run_analysis_5
 returns the average of each variable for each activity and each subject as defined in the file mean_dev.csv created by the function run_analysis() as defined in the file run_analysis.R.
+    
     run_analysis_5 <- function(){
       library(data.table)
       dt <- fread("dataset/mean_dev.csv", sep=",")
